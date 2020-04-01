@@ -1,73 +1,36 @@
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1;
-}
-
-textarea{
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1;
+	/* background-image: url("https://wallpaperaccess.com/full/24247.jpg"); */
 }
 
 .jumbotron {
-  text-align: center;
-  background-image: url("https://www.mitchellcounty.org/wp-content/uploads/2018/04/Calendar-Background.jpg");
-  background-color: transparent;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+	text-align: center;
+	background-image: url("https://www.mitchellcounty.org/wp-content/uploads/2018/04/Calendar-Background.jpg");
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	border-radius: 0;
+	border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
+.textCol {
+	cursor: pointer;
 }
 
-.time-block{
-  text-align: center;
-  border-radius: 15px;
+.saveCol {
+	cursor: pointer;
 }
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
+input {
+	width: 100%;
+	text-align: center;
+	/* color: white; */
 
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
+	border-width: 0;
+	padding: 0;
 
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+	/* background: transparent;
+	border: none;
+	outline: none; */
 }
