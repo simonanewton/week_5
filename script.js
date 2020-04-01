@@ -55,8 +55,10 @@ $(document).ready(function () {
             inputText.attr("id", "input");
             inputText.attr("placeholder", "Enter your task here.");
 
+            var textArea;
+
             textCol.click(function () {
-                var textArea = $(this);
+                textArea = $(this);
 
                 if (textArea.attr("clicked") === "false") {
                     textArea.attr("clicked", "true");
@@ -66,12 +68,12 @@ $(document).ready(function () {
 
                 else {
                     inputText.val(textArea.text());
-                    textArea.text("");
+                    textArea.empty();
                     textArea.append(inputText);
                     inputText.focus();
                 }
 
-                inputText.on("keyup blur", function (event) {
+                inputText.keyup(function (event) {
                     if (event.keyCode === 13) {
                         enterText = inputText.val();
                         textArea.text(enterText);
@@ -97,14 +99,15 @@ $(document).ready(function () {
             saveCol.append(saveIcon);
 
             saveCol.click(function () {
-                console.log("The save button has been clicked.");
+                var saveBtn = $(this);
 
-                var index = $(this).attr("index");
+                var index = saveBtn.attr("index");
                 console.log("The index of this save button is: " + index);
 
-                // var index = i - startTime;
-                // var input = textCol.text();
-                // saveInput(input, index);
+                var input = textArea.text();
+                console.log("The value of the textCol is: " + input);
+
+                saveInput(input, index);
             });
 
             timeSlot.append(timeCol, textCol, saveCol);
@@ -137,13 +140,24 @@ $(document).ready(function () {
     function loadInputs() {
         storedInputs = JSON.parse(localStorage.getItem("storedInputs"));
 
-        if (storedInputs === !null) {
+        if (storedInputs != null) {
             storedInputs.forEach(element => {
-                $(textCols[element.index]).text(element.input);
+                var input = element.input;
+                var index = parseInt(element.index);
+
+                $(textCols[index]).text(input);
+                $(textCols[index]).attr("clicked", "true");
             });
         }
         else storedInputs = [];
     }
+
+    $(".clearBtn").click(function () {
+        textCols.each(function () {
+            $(this).empty();
+        });
+        localStorage.clear();
+    });
 
     //----------------------------------------------------------------
 
@@ -158,7 +172,7 @@ $(document).ready(function () {
         fillColors();
 
         // load the calendar with stored inputs from localStorage
-        // loadInputs();
+        loadInputs();
     }
 
     main();
