@@ -54,9 +54,6 @@ $(document).ready(function () {
             // create the input for the user to write to
             var inputText = $("<input>");
             inputText.attr("type", "text");
-            inputText.attr("id", "input");
-            inputText.attr("placeholder", "Enter your task here.");
-
 
             // intialize the area for displaying text
             var textArea;
