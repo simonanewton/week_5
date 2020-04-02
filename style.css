@@ -2,7 +2,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	line-height: 1;
-	/* background-image: url("https://wallpaperaccess.com/full/24247.jpg"); */
 }
 
 .jumbotron {
@@ -20,17 +19,20 @@ body {
 
 .saveCol {
 	cursor: pointer;
+	font-size: 24px;
+}
+
+.saveCol:active {
+	background-color: #0A95AB !important;
 }
 
 input {
 	width: 100%;
 	text-align: center;
-	/* color: white; */
-
+	color: white;
 	border-width: 0;
 	padding: 0;
-
-	/* background: transparent;
+	background: transparent;
 	border: none;
-	outline: none; */
+	outline: none;
 }

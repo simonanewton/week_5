@@ -2,7 +2,7 @@
 
 ## Description
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This projects creates a simple calendar website that allows users to input and save events on their schedule during normal working hours. The webiste utilizes Bootrstrap and CSS styling with underlying jQuery functionality. Through this project I learned how to dynamically create and add functionality to various HTML elements with jQuery.
 
 ## Goals
 
